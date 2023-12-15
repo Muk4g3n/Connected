@@ -10,8 +10,8 @@ const Navbar = () => {
   return (
     <nav className="w-full h-[12vh] flex items-center justify-center border-b-2">
       <div className="w-[96%] h-full flex items-center justify-between ">
-        <div className=" w-[20%] flex items-center justify-between">
-          <div className="h-fit ">
+        <div className="h-full w-[20%] flex items-center justify-between">
+          <div className="h-full w-[70%] flex items-center">
             <img src="/logo.svg" alt="logo" />
           </div>
           <Link to={"/"}>
