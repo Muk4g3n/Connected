@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="w-full h-[12vh] flex items-center justify-center border-b-2">
       <div className="w-[96%] h-full flex items-center justify-between ">
-        <div className="h-full w-[20%] flex items-center justify-between">
+        <div className="h-full w-[22%] flex items-center justify-between">
           <div className="h-full w-[70%] flex items-center">
             <img src="/logo.svg" alt="logo" />
           </div>
@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="h-[40%] w-[25%] relative">
           <img
             className="absolute left-4 top-1/2 -translate-y-1/2 mt-1"
-            src="/searchicon.png"
+            src="/search.png"
             alt="search"
           />
           <input

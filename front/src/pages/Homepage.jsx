@@ -13,9 +13,11 @@ const Homepage = () => {
     <div className="w-full h-full flex flex-col items-center font-radio-canada">
       <Navbar />
 
-      <div className=" w-full h-[90v] flex ">
-        <Sidebar/>
-
+      <div className=" w-full h-[90vh] flex">
+        <Sidebar />
+        <div className="w-[82%] h-full flex justify-center">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
