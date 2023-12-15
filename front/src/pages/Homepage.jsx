@@ -9,10 +9,10 @@ const Homepage = () => {
   // const { canvasOptions } = useCanvas();
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full flex flex-col items-center font-radio-canada">
       <Navbar />
 
-      <div className=" w-full h-[90v] flex">
+      <div className=" w-full h-[90v] flex ">
         <h1> Side Bar </h1>
         <h2>Homepage</h2>
       </div>

@@ -6,6 +6,11 @@ export default {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        explora: ["Explora", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        "radio-canada": ["Radio Canada", "sans-serif"],
+      },
     },
   },
   plugins: [],

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLogout, useUser } from "../hooks";
 
-const ProfileDropDown = () => {
+const Profile = () => {
   const logout = useLogout();
   const { user } = useUser();
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +11,8 @@ const ProfileDropDown = () => {
     setIsOpen(!isOpen);
   };
 
-  const getNameLetters = (name) => {
-    const names = name.split(" ");
+  const getNameLetters = () => {
+    const names = "Ouassim Kessir".split(" ");
     return `${names[0][0]}${names[1][0]}`;
   };
 
@@ -24,14 +24,22 @@ const ProfileDropDown = () => {
 
   return (
     <div className="relative">
-      <button
-        className="bg-slate-200 w-[2.5rem] h-[2.5rem] text-black rounded-full focus:outline-none tracking-wider"
+      <div
+        className=" focus:outline-none tracking-wider flex items-center gap-4"
         onClick={toggleDropdown}
       >
-        {getNameLetters(user.name)}
-      </button>
-      {isOpen && (
-        <div className="absolute -right-1/2 mt-2 w-28 bg-white border rounded-lg shadow-lg flex flex-col z-10">
+        <img
+          className="w-[2.5rem] h-[2.5rem] text-black rounded-full"
+          src="/profile.png"
+          alt="profile"
+        />
+        <div className="flex flex-col items-start ">
+          <h2 className="text-sm"> Kessir Ouassim </h2>
+          <p className="text-xs">view profile</p>
+        </div>
+      </div>
+      {/* {isOpen && (
+        <div className="absolute left-1/2 mt-2 w-28 bg-white border rounded-lg shadow-lg flex flex-col z-10">
           {items.map((item, index) => {
             // <li
             //   key={index}
@@ -70,9 +78,9 @@ const ProfileDropDown = () => {
             }
           })}
         </div>
-      )}
+      )} */}
     </div>
   );
 };
 
-export default ProfileDropDown;
+export default Profile;
