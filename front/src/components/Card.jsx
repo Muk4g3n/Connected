@@ -1,45 +1,38 @@
 import React from "react";
-import { useDelProductMutation } from "../app/endpoints/productEndpoints";
-import { toast } from "react-toastify";
-import { useColor } from "../hooks";
+// import "./Card.styles.scss";
 
-const Card = ({ name, id, handleProdDel, color }) => {
-  const [delProduct, { isloading, error }] = useDelProductMutation();
-  const { setColor } = useColor();
-
-  const del = () => {
-    delProduct({ productid: id })
-      .unwrap()
-      .then((message) => {
-        handleProdDel(id);
-        toast(message.data);
-      })
-      .catch((err) => toast.error(err.data.message));
-  };
-
-  const viewHandle = () => {
-    setColor(color);
-  };
-
+const Card = ({ task, empty }) => {
+  console.log(task);
   return (
-    <div className="bg-white w-[15rem] h-[6rem] rounded-lg shadow-lg flex flex-col gap-1 mr-3 p-4">
-      <div className="  w-full flex justify-between items-center">
-        <h2 className=" text-xl font-bold mb-2">{name}</h2>
-        <button onClick={del}>
-          <img className="w-6 h-6" src="/trash.png" alt="trash" />
-        </button>
-      </div>
+    <div
+      // className={
+      //   `w-full bg-white mb-[10px] p-{10px}-{20px} rounded-[3px] cursor-pointer ` +
+      //   (empty ? "bg-gray-500 text-gray-500" : "")
+      // }
+      className={
+        `w-full h-[8rem] cursor-pointer flex flex-col items-start gap-6 bg-white rounded-md pt-4 border-2 border-[#2623d22a]` +
+        (empty ? "bg-gray-500 text-gray-500" : "")
+      }
+    >
+      {!empty && (
+        <>
+          <h1 className="font-semibold text-lg pl-6">{task.text}</h1>
+          <div className=" w-full flex items-center pl-6 gap-16">
+            <div className="flex items-center w-[50%] gap-6">
+              <img src="./design.png" alt="design" />
 
-      <div className="  w-full flex justify-between items-center">
-        <p className="text-gray-700 mb-2 font-bold">$99.99</p>
+              <div className="w-[8rem] h-[2.5rem] flex items-center justify-center rounded-md bg-[#2623D20D] text-[#2623D2]">
+                {task.team}
+              </div>
+            </div>
 
-        <button
-          onClick={viewHandle}
-          className=" bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded font-thin"
-        >
-          View
-        </button>
-      </div>
+            <div className="flex items-center justify-end gap-3 w-[20%]">
+              <h2>{task.assignee.name}</h2>
+              <img src="./profile.png" alt="profile" />
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

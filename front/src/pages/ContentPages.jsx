@@ -8,7 +8,7 @@ const ContentPages = ({ title, content }) => {
         <div className="w-full h-[2px] bg-[#E3E3E3] rounded-lg mt-3"></div>
       </div>
 
-      <div className="w-full h-[90%] ">{content}</div>
+      <div className="w-full h-[90%]">{content}</div>
     </div>
   );
 };
