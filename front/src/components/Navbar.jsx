@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="w-full h-[12vh] flex items-center justify-center border-b-2">
       <div className="w-[96%] h-full flex items-center justify-between ">
         <div className="h-full w-[22%] flex items-center justify-between">
-          <div className="h-full w-[75.8%] flex items-center border-r-2">
+          <div className="h-full w-[70%] flex items-center">
             <img src="/logo.svg" alt="logo" />
           </div>
           <Link to={"/"}>
