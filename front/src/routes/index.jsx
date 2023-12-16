@@ -31,7 +31,7 @@ export default function Routes() {
           element: <Calendar />,
         },
         {
-          path: "/dashboard",
+          path: "/insights",
           // element: user ? <MyDesigns /> : <Navigate to={"/login"} replace />,
           element: <DataVis />,
         },

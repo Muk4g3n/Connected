@@ -32,6 +32,20 @@
   border-radius: 4px;
 }
 
+#ll {
+  margin-left: -20px;
+  text-align: left;
+}
+#ll li {
+  margin-left: -55px;
+  text-align: left;
+}
+#ll h1 {
+  margin-bottom: 15px;
+  margin-left: -65px;
+  text-align: left;
+}
+
 #icon {
   fill: #000;
 }

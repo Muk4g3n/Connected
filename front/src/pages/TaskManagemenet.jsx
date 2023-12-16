@@ -89,7 +89,7 @@ const TaskBoard = (props) => {
 
   return (
     <div className="w-full h-full  flex flex-col ">
-      <TaksManagerOptions />
+      <TaksManagerOptions taskManager={true} />
 
       <DndProvider backend={HTML5Backend}>
         <CustomDragLayer />

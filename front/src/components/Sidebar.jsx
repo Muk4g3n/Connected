@@ -29,21 +29,24 @@ function Sidebar() {
             {" "}
             <img src={file} id="icon" alt="CKL Icon" /> {sdb[2]}
           </li>
-          <li>
-            {" "}
-            <img src={archive} id="icon" alt="CKL Icon" /> {sdb[3]}
-          </li>
+
           <li>
             {" "}
             <img src={cal} id="icon" alt="CKL Icon" /> {sdb[4]}
           </li>
         </ul>
-        <div>
-          <h1>📨 Email me for Data</h1>
-          <p>Unlock Limitless Potential and receive news emails</p>
-          <input placeholder="name@mail.com" />
-          <button>Subcribe</button>
-        </div>
+        <ul id="ll">
+          <h1 className="text-xl pl-6 font-bold">Others</h1>
+          <li>
+            {" "}
+            <img src={archive} id="icon" alt="CKL Icon" /> {sdb[3]}
+          </li>
+          <h1 className="text-xl pl-6 font-bold"> My Workspace</h1>
+          <li>
+            {" "}
+            <img src="/dropdown.svg" id="icon" alt="CKL Icon" /> {sdb[3]}
+          </li>
+        </ul>
       </nav>
     </>
   );

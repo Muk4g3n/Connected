@@ -1,6 +1,6 @@
 import React from "react";
 
-const TaksManagerOptions = () => {
+const TaksManagerOptions = ({ taskManager }) => {
   const teammates = [1, 1, 1, 1, 1];
 
   return (
@@ -37,10 +37,12 @@ const TaksManagerOptions = () => {
         </div>
       </div>
 
-      <button className="w-[8rem] h-[3rem] rounded-lg bg-[#2623D20D] flex items-center justify-evenly text-[#2623D2] mr-6">
-        <img src="./plus.png" alt="plsu" />
-        <span>Add a task</span>
-      </button>
+      {taskManager && (
+        <button className="w-[8rem] h-[3rem] rounded-lg bg-[#2623D20D] flex items-center justify-evenly text-[#2623D2] mr-6">
+          <img src="./plus.png" alt="plsu" />
+          <span>Add a task</span>
+        </button>
+      )}
     </div>
   );
 };
